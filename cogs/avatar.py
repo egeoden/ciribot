@@ -8,13 +8,13 @@ class Avatar(commands.Cog):
         self.client=client
 
     @commands.slash_command(name="avatar", description="sleş")
-    async def avatar(self,inter):
+    async def avatar(self,inter,member: disnake.Member):
         embed = disnake.Embed(
-            title= f"{inter.author} kullanıcısının avatarı",
+            title= f"{member} kullanıcısının avatarı",
             description = "\n",
-            color = inter.author.top_role.color
+            color = member.top_role.color
         )
-        embed.set_image(url=inter.author.display_avatar.url)
+        embed.set_image(url=member.display_avatar.url)
         await inter.response.send_message(embed = embed)
 
 def setup(client):
