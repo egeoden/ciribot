@@ -17,4 +17,10 @@ async def on_ready():
 async def hello(ctx):
     await ctx.channel.send(f"selamlar {ctx.author.mention}")
 
+
+
+cogList= ["cogs.avatar"]
+for cog in cogList:
+    client.load_extension(cog)
+    
 client.run(TOKEN)        
