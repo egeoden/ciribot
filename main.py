@@ -3,7 +3,7 @@ import os
 from disnake.ext import commands
 from keep_alive import keep_alive
 
-
+keep_alive()
 
 
 TOKEN= os.environ["TOKEN"]
