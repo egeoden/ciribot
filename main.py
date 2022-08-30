@@ -1,26 +1,15 @@
-import disnake
-import os
-from disnake.ext import commands
-from keep_alive import keep_alive
+import nextcord
 
-keep_alive()
+from nextcord import Interaction
+from nextcord.ext import commands
 
+intens = nextcord.Intents.default()
+intents.members = True
 
-TOKEN= os.environ["TOKEN"]
-client = commands.Bot(command_prefix="*", help_command = None, intents= disnake.Intents.all())
+client = commands.Bot(command_prefix = '!', intents=intents)
 
 @client.event
 async def on_ready():
-    print(f"{client.user} is ready")
+    print("Botu kullanabilin")
 
-@client.command()
-async def hello(ctx):
-    await ctx.channel.send(f"selamlar {ctx.author.mention}")
-
-
-
-cogList= ["cogs.avatar"]
-for cog in cogList:
-    client.load_extension(cog)
-    
-client.run(TOKEN)        
+client.run('MTAxMDkxMjY0NjU3MDIwMTIxOA.GdnPIr.FfNyx7lTuZs3FNC7MmJNIeXebNhMvkpMhVl_-c')
