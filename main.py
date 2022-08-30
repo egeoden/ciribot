@@ -12,7 +12,9 @@ client = commands.Bot(command_prefix = '!', intents=intents)
 async def on_ready():
     print("Botu kullanabilin")
 
-@nextcord.slash_command(name= 'hello', description = 'Replies with hello')
+testserver= 1009068314158432288
+
+@nextcord.slash_command(name= 'hello', description = 'Replies with hello', guild_ids = [testserver])
 async def hello_com(interaction : Interaction):
     await interaction.response.send_message("Hello")
 
