@@ -12,4 +12,4 @@ client = commands.Bot(command_prefix = '!', intents=intents)
 async def on_ready():
     print("Botu kullanabilin")
 
-client.run('MTAxMDkxMjY0NjU3MDIwMTIxOA.GdnPIr.FfNyx7lTuZs3FNC7MmJNIeXebNhMvkpMhVl_-c')
+client.run('TOKEN')
