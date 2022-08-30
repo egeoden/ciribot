@@ -12,4 +12,9 @@ client = commands.Bot(command_prefix = '!', intents=intents)
 async def on_ready():
     print("Botu kullanabilin")
 
+@nextcord.slash_command(name= 'hello', description = 'Replies with hello')
+async def hello_com(interaction : Interaction):
+    await interaction.response.send_message("Hello")
+
+
 client.run('TOKEN')
